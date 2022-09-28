@@ -32,7 +32,11 @@ namespace MojaPrvaWindowsAplikacija
             }
             catch (Exception greska)
             {
-                txtGreske.Text ="Neispravni upis \r\nGreška: " + greska.Message;
+                string text = "Molim upisati broj.\n" + greska.Message;
+                string naslov = "Pogrešan unos";
+                MessageBoxButtons buttons= MessageBoxButtons.OK;
+                MessageBoxIcon icon = MessageBoxIcon.Error;
+                MessageBox.Show(text, naslov, buttons, icon);
             }
         }
 
